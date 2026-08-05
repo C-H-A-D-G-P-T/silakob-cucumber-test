@@ -100,4 +100,8 @@ export class HomePage {
 		await expect(this.page.locator('.btn-purchase')).toBeEnabled();
 		console.log('Proceed to checkout button is enabled.');
 	}
+
+	async clickCheckoutBtn() {
+		await this.page.locator('.btn-purchase').click();
+	}
 }

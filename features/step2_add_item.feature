@@ -1,4 +1,4 @@
-Feature: Step 2 : Homepage - Shop
+Feature: Step 2 : Homepage - Add items
     As a customer of the shop
     I want to add item to cart
     So that I can proceed to checkout
@@ -17,3 +17,4 @@ Feature: Step 2 : Homepage - Shop
         Then I should see added item in my cart
         And Total cost is calculated correctly
         Then Proceed to checkout button will be enabled
+        And I clicks on Proceed to checkout button

@@ -26,3 +26,8 @@ Then('Proceed to checkout button will be enabled', async function () {
 	const homePage = new HomePage(this.page);
 	await homePage.verifyCheckoutBtnEnabled();
 });
+
+Then('I clicks on Proceed to checkout button', async function () {
+	const homePage = new HomePage(this.page);
+	await homePage.clickCheckoutBtn();
+});

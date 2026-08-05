@@ -12,8 +12,8 @@ Before(async function () {
 	this.page = await context.newPage();
 });
 
-// After(async function () {
-// 	// 3. ปิด Page และ Browser เมื่อรันเทสจบ
-// 	await this.page?.close();
-// 	await browser?.close();
-// });
+After(async function () {
+	// 3. ปิด Page และ Browser เมื่อรันเทสจบ
+	await this.page?.close();
+	await browser?.close();
+});

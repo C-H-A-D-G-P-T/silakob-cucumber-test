@@ -1,4 +1,4 @@
-Feature: Step 1 : Login - Shop
+Feature: Step 1 : Login
     As a customer of the shop
     I want to log in to my account
     So that I can start shopping for products
@@ -15,7 +15,6 @@ Feature: Step 1 : Login - Shop
     Scenario Outline: Login failed with invalid credentials
         When I login with email "<email>" and password "<password>"
         Then I should see a login error message "<error_message>"
-
         Examples:
             | email           | password  | error_message                                                        |
             | admin@admin     | admin123  | Bad credentials! Please try again! Make sure that you've registered. |

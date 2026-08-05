@@ -1,7 +1,16 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { HomePage } from '../pages/HomePage';
+import { LoginPage } from '../pages/LoginPage';
 
 let scenarioContext: any = {};
+
+Given('I am on the Homepage', async function () {
+	const loginPage = new LoginPage(this.page);
+
+	await loginPage.navigate()
+	await loginPage.login('admin@admin.com', 'admin123');
+	await loginPage.verifyLoginSuccessful();
+});
 
 When('I add the following items to cart:', { timeout: 30000 }, async function (dataTable) {
 	const homePage = new HomePage(this.page);

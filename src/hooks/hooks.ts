@@ -5,11 +5,13 @@ let browser: Browser;
 
 Before(async function () {
 	// 1. สั่งเปิด Browser
-	browser = await chromium.launch({ headless: false }); // ตั้งเป็น true ถ้าไม่ต้องการให้เด้งหน้าต่าง
-	const context = await browser.newContext();
+	browser = await chromium.launch({
+		headless: false,
+		args: ['--start-maximized'],
+	});
 
-	// 2. สร้าง page แล้วเอาไปใส่ไว้ใน this.page ของ Cucumber World
-	this.page = await context.newPage();
+	// 2. สร้าง page โดยตรง (ใช้ viewport: null เพื่อให้ขยายเต็มจอ)
+	this.page = await browser.newPage({ viewport: null });
 });
 
 After(async function () {

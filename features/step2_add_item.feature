@@ -4,9 +4,7 @@ Feature: Step 2 : Homepage - Add items
     So that I can proceed to checkout
 
     Background:
-        Given I am on the Login page
-        Then I login with email "admin@admin.com" and password "admin123"
-        And I should be successfully logged in and landed to Homepage
+        Given I am on the Homepage
 
     @positive @addItem @step2
     Scenario: Add item(s) to cart successfully

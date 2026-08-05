@@ -75,24 +75,27 @@ export class HomePage {
 		}
 	}
 
-	async calcTotalCost(items: any[]) {
+	async calcTotalCost(items: any[]): Promise<string> {
 		let expectedTotal: number = 0;
-		const actualTotal = await this.page.locator('.cart-total-price').textContent();
 
 		for (const item of items) {
 			const itemName: string = item.item_name;
 			const itemQty: number = Number(item.quantity);
 
-			const itemPrice = (await this.page.locator('.cart-row', { hasText: itemName }).locator('.cart-price').textContent()) || '$0.00';
+			const itemPrice = (await this.page.locator('.cart-row', { hasText: itemName }).locator('.cart-price').textContent()) ?? '$0.00';
 			const parsedItemPrice = parseFloat(itemPrice.replace('$', ''));
 			const calItemPrice = Number((parsedItemPrice * itemQty).toFixed(2));
 
 			expectedTotal += calItemPrice;
 		}
 
-		expect(actualTotal).toBe(`$${expectedTotal}`);
+		const actualTotal = (await this.page.locator('.cart-total-price').textContent()) ?? '$0.00';
+		const expectedTotalFormatted = `$${expectedTotal.toFixed(2)}`;
+		expect(actualTotal).toBe(expectedTotalFormatted);
 
-		console.log(`Total price matches as expected -- Expected: $${expectedTotal} | Actual: ${actualTotal}`);
+		console.log(`✅ Total price matches -- Expected: ${expectedTotalFormatted} | Actual: ${actualTotal}`);
+
+		return actualTotal;
 	}
 
 	async verifyCheckoutBtnEnabled() {

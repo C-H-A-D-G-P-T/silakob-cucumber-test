@@ -4,17 +4,7 @@ Feature: Step 3 : Shipping Details
     So that I can submit the order
 
     Background:
-        Given I am on the Login page
-        Then I login with email "admin@admin.com" and password "admin123"
-        And I should be successfully logged in and landed to Homepage
-        Then I add the following items to cart:
-            | item_name          | quantity |
-            | Dior J'adore       | 2        |
-            | Gucci Bloom Eau de | 3        |
-        And I should see added item in my cart
-        Then Total cost is calculated correctly
-        And Proceed to checkout button will be enabled
-        Then I clicks on Proceed to checkout button
+        Given I am on the Shipping Details page
 
     @positive @shippingDetails @step3
     Scenario:  Input all required fields
@@ -23,7 +13,7 @@ Feature: Step 3 : Shipping Details
             | street       | Ramintra   |
             | city         | Bangkok    |
             | country      | Thailand   |
-        Then I should submit order successfully
+        Then I submit order successfully
 
     @negative @shippingDetails @step3
     ### Use Scenario Outline with Placeholders ###

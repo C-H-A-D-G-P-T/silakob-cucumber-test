@@ -20,7 +20,7 @@ jobs:
                   cache: 'npm' # Optional: speeds up installs
 
             - name: Install dependencies
-              run: npm ci
+              run: npm ci --no-optional
               # The fsevents warning is harmless on Linux, can be ignored
 
             - name: Install Playwright browsers

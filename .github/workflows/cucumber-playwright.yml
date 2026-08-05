@@ -1,4 +1,4 @@
-name: Playwright Cucumber Tests
+name: Playwright Tests
 
 on:
     push:
@@ -16,19 +16,30 @@ jobs:
 
             - uses: actions/setup-node@v4
               with:
-                  node-version: 'latest' # Updated to Node 22
-                  cache: 'npm' # Optional: speeds up installs
+                  node-version: '22'
 
-            - name: Install dependencies
-              run: npm ci --omit=optional
-              # The fsevents warning is harmless on Linux, can be ignored
+            - name: Remove fsevents from dependencies
+              run: |
+                  # Remove fsevents from package.json if it's there
+                  if grep -q fsevents package.json; then
+                    sed -i '/fsevents/d' package.json
+                  fi
+                  # Remove from package-lock.json
+                  if [ -f package-lock.json ]; then
+                    sed -i '/fsevents/d' package-lock.json
+                  fi
+
+            - name: Install dependencies (force)
+              run: npm install --no-optional --force
+              # This will install everything except fsevents
 
             - name: Install Playwright browsers
               run: npx playwright install --with-deps chromium
 
             - name: Run tests
               run: npm test
-              # Or: npx cucumber-js
+              env:
+                  CI: true
 
             - name: Upload report
               if: always()

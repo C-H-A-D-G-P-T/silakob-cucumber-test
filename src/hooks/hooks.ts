@@ -6,7 +6,7 @@ let browser: Browser;
 Before(async function () {
 	// 1. สั่งเปิด Browser
 	browser = await chromium.launch({
-		headless: false,
+		headless: true,
 		args: ['--start-maximized'],
 	});
 

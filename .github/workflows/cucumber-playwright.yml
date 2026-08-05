@@ -1,39 +1,39 @@
-name: Cucumber Playwright Tests
+name: Playwright Cucumber Tests
 
 on:
     push:
         branches: [main, master]
     pull_request:
         branches: [main, master]
+    workflow_dispatch:
 
 jobs:
     test:
-        timeout-minutes: 60
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
-                  node-version: '18'
+                  node-version: 'latest' # Updated to Node 22
+                  cache: 'npm' # Optional: speeds up installs
 
             - name: Install dependencies
               run: npm ci
+              # The fsevents warning is harmless on Linux, can be ignored
 
-            - name: Install Playwright Browsers
+            - name: Install Playwright browsers
               run: npx playwright install --with-deps chromium
 
-            - name: Run Cucumber tests
-              run: npm test # หรือ npx cucumber-js
+            - name: Run tests
+              run: npm test
+              # Or: npx cucumber-js
 
-            - name: Upload test results
+            - name: Upload report
               if: always()
               uses: actions/upload-artifact@v4
               with:
-                  name: test-results
-                  path: |
-                      test-results/
-                      playwright-report/
-                      cucumber-report/
+                  name: playwright-report
+                  path: playwright-report/
                   retention-days: 30

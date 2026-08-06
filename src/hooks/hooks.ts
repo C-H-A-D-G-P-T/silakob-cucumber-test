@@ -1,21 +1,36 @@
 import { Before, After } from '@cucumber/cucumber';
-import { chromium, Browser, Page } from '@playwright/test';
+import { chromium, Browser, request as playwrightRequest, APIRequestContext } from '@playwright/test';
+import { EmployeeApi } from '../api/employeeApi';
 
 let browser: Browser;
+let apiContext: APIRequestContext;
 
 Before(async function () {
-	// 1. สั่งเปิด Browser
+	// 1. Open browser
 	browser = await chromium.launch({
 		headless: true,
-		args: ['--start-maximized'],
 	});
 
-	// 2. สร้าง page โดยตรง (ใช้ viewport: null เพื่อให้ขยายเต็มจอ)
+	// 2. Create page, viewport: null for fullscreen
 	this.page = await browser.newPage({ viewport: null });
+
+	// 3. Initialize API context (For API Tests)
+	apiContext = await playwrightRequest.newContext({
+		baseURL: 'http://localhost:8887',
+		extraHTTPHeaders: {
+			'Content-Type': 'application/json',
+		},
+	});
+	this.apiContext = apiContext;
 });
 
 After(async function () {
-	// 3. ปิด Page และ Browser เมื่อรันเทสจบ
+	// 1. Close page and browser after run ended
 	await this.page?.close();
 	await browser?.close();
+
+	// 2. Close API context
+	if (this.apiContext) {
+		await apiContext.dispose();
+	}
 });

@@ -1,6 +1,6 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import { HomePage } from '../pages/HomePage';
-import { LoginPage } from '../pages/LoginPage';
+import { HomePage } from '../../pages/HomePage';
+import { LoginPage } from '../../pages/LoginPage';
 
 let scenarioContext: any = {};
 

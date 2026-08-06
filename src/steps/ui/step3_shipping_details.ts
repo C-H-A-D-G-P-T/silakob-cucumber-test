@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import { ShippingDetailsPage } from '../pages/ShippingDetailsPage';
-import { HomePage } from '../pages/HomePage';
-import { LoginPage } from '../pages/LoginPage';
+import { ShippingDetailsPage } from '../../pages/ShippingDetailsPage';
+import { HomePage } from '../../pages/HomePage';
+import { LoginPage } from '../../pages/LoginPage';
 
 Given('I am on the Shipping Details page', async function () {
 	const loginPage = new LoginPage(this.page);

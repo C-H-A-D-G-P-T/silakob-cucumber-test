@@ -1,0 +1,460 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-employee---post-/api/v1/employees;create-employee-with-invalid-email-format-should-return-400",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Create employee with invalid email format should return 400",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 387846333
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3620834
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I set the API endpoint to \"/api/v1/employees\"",
+            "match": {
+              "location": "src/steps/api/common.step.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 430207
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstName",
+                      "John"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "lastName",
+                      "Doe"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "dob",
+                      "1999-08-20"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "email",
+                      "john.doe@.com"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I have an employee data with:",
+            "match": {
+              "location": "src/steps/api/employees_create.step.ts:5"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 140587207
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I send a POST request to create the employee",
+            "match": {
+              "location": "src/steps/api/employees_create.step.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3304708
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the response status should be 400",
+            "match": {
+              "location": "src/steps/api/common.step.ts:8"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2390208
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "the error message should be \"must be a well-formed email address\"",
+            "match": {
+              "location": "src/steps/api/employees_create.step.ts:16"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 30940999
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 16
+          },
+          {
+            "name": "@negative",
+            "line": 16
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-employee---post-/api/v1/employees;create-a-new-employee-with-valid-data-should-return-201",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Create a new employee with valid data should return 201",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 387547000
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3596125
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I set the API endpoint to \"/api/v1/employees\"",
+            "match": {
+              "location": "src/steps/api/common.step.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 754459
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstName",
+                      "John"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "lastName",
+                      "Doe"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "dob",
+                      "1999-08-20"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "email",
+                      "john.doe@example.com"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I have an employee data with:",
+            "match": {
+              "location": "src/steps/api/employees_create.step.ts:5"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 138572040
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I send a POST request to create the employee",
+            "match": {
+              "location": "src/steps/api/employees_create.step.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3359208
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the response status should be 201",
+            "match": {
+              "location": "src/steps/api/common.step.ts:8"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 34749874
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 6
+          },
+          {
+            "name": "@positive",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-employee---post-/api/v1/employees",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create Employee - POST /api/v1/employees",
+    "tags": [],
+    "uri": "features/api/employees_create.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "get-employee-by-id---get-/api/v1/employees/{id};get-existing-employee-by-id-should-return-200",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Get existing employee by ID should return 200",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 387893250
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3486499
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I set the API endpoint to \"/api/v1/employees\"",
+            "match": {
+              "location": "src/steps/api/common.step.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1566000
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I have an existing employee with ID \"1\"",
+            "match": {
+              "location": "src/steps/api/employees_get.step.ts:5"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 139723792
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I send a GET request to get the employee detail",
+            "match": {
+              "location": "src/steps/api/employees_get.step.ts:13"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2147042
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "src/steps/api/common.step.ts:8"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33852750
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 6
+          },
+          {
+            "name": "@positive",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-employee-by-id---get-/api/v1/employees/{id};get-non-existent-employee-by-id-should-return-404",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Get non-existent employee by ID should return 404",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 387322500
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3434041
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I set the API endpoint to \"/api/v1/employees\"",
+            "match": {
+              "location": "src/steps/api/common.step.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1190292
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I have an employee ID that does not exist \"99999\"",
+            "match": {
+              "location": "src/steps/api/employees_get.step.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 138250334
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I send a GET request to get the employee detail",
+            "match": {
+              "location": "src/steps/api/employees_get.step.ts:13"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2538708
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the response status should be 404",
+            "match": {
+              "location": "src/steps/api/common.step.ts:8"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2880333
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the response body should contain the message \"Employee not found with ID 99999\"",
+            "match": {
+              "location": "src/steps/api/employees_get.step.ts:19"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33218917
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 12
+          },
+          {
+            "name": "@negative",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "get-employee-by-id---get-/api/v1/employees/{id}",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Get Employee by ID - GET /api/v1/employees/{id}",
+    "tags": [],
+    "uri": "features/api/employees_get.feature"
+  }
+]

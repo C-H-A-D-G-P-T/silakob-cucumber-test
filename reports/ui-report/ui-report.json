@@ -1,0 +1,1356 @@
+[
+  {
+    "description": "    As a customer of the shop\n    I want to log in to my account\n    So that I can start shopping for products",
+    "elements": [
+      {
+        "description": "",
+        "id": "step-1-:-login;login-successfully-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Login successfully with valid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 447992707
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1624715874
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "src/steps/step1_login.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 88282250
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I login with email \"admin@admin.com\" and password \"admin123\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7660083
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should be successfully logged in and landed to Homepage",
+            "match": {
+              "location": "src/steps/step1_login.ts:14"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 23437208
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@positive",
+            "line": 9
+          },
+          {
+            "name": "@login",
+            "line": 9
+          },
+          {
+            "name": "@step1",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-1-:-login;login-failed-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "Login failed with invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 448040792
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1533680124
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "src/steps/step1_login.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 73107166
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I login with email \"admin@admin\" and password \"admin123\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6585957
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see a login error message \"Bad credentials! Please try again! Make sure that you've registered.\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:19"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 27494708
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 14
+          },
+          {
+            "name": "@login",
+            "line": 14
+          },
+          {
+            "name": "@step1",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-1-:-login;login-failed-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Login failed with invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 447784999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1449733291
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "src/steps/step1_login.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 84319707
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I login with email \"admin@admin.com\" and password \"admin1234\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6335624
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see a login error message \"Bad credentials! Please try again! Make sure that you've registered.\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:19"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 23679375
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 14
+          },
+          {
+            "name": "@login",
+            "line": 14
+          },
+          {
+            "name": "@step1",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-1-:-login;login-failed-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Login failed with invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 447556875
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1900623375
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "src/steps/step1_login.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 61034666
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I login with email \"user@admin.com\" and password \"admin123\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 5925791
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see a login error message \"Bad credentials! Please try again! Make sure that you've registered.\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:19"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 20176500
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 14
+          },
+          {
+            "name": "@login",
+            "line": 14
+          },
+          {
+            "name": "@step1",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-1-:-login;login-failed-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 23,
+        "name": "Login failed with invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 114974041
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1219007582
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "src/steps/step1_login.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 60888708
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I login with email \"user@admin.com\" and password \"admin1234\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1692415
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see a login error message \"Bad credentials! Please try again! Make sure that you've registered.\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:19"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 16462833
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 14
+          },
+          {
+            "name": "@login",
+            "line": 14
+          },
+          {
+            "name": "@step1",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-1-:-login;login-failed-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 24,
+        "name": "Login failed with invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 133609832
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1279963249
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "src/steps/step1_login.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 70842208
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I login with email \"admin@admin.com\" and password \"\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1754875
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see a login error message \"Bad credentials! Please try again! Make sure that you've registered.\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:19"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 28039667
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 14
+          },
+          {
+            "name": "@login",
+            "line": 14
+          },
+          {
+            "name": "@step1",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-1-:-login;login-failed-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "Login failed with invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 117754124
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1602592917
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "src/steps/step1_login.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 54142417
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I login with email \"\" and password \"admin123\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2211291
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see a login error message \"Bad credentials! Please try again! Make sure that you've registered.\"",
+            "match": {
+              "location": "src/steps/step1_login.ts:19"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 14458125
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 14
+          },
+          {
+            "name": "@login",
+            "line": 14
+          },
+          {
+            "name": "@step1",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "step-1-:-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Step 1 : Login",
+    "tags": [],
+    "uri": "features/ui/step1_login.feature"
+  },
+  {
+    "description": "    As a customer of the shop\n    I want to add item to cart\n    So that I can proceed to checkout",
+    "elements": [
+      {
+        "description": "",
+        "id": "step-2-:-homepage---add-items;add-item(s)-to-cart-successfully",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Add item(s) to cart successfully",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 105012541
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1251592125
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Homepage",
+            "match": {
+              "location": "src/steps/step2_add_item.ts:7"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 879161207
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "item_name",
+                      "quantity"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Dior J'adore",
+                      "2"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Gucci Bloom Eau de",
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I add the following items to cart:",
+            "match": {
+              "location": "src/steps/step2_add_item.ts:15"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4186832
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see added item in my cart",
+            "match": {
+              "location": "src/steps/step2_add_item.ts:24"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4286375
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "Total cost is calculated correctly",
+            "match": {
+              "location": "src/steps/step2_add_item.ts:29"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1629708
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "Proceed to checkout button will be enabled",
+            "match": {
+              "location": "src/steps/step2_add_item.ts:34"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 18460917
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I clicks on Proceed to checkout button",
+            "match": {
+              "location": "src/steps/step2_add_item.ts:39"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 14405042
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@positive",
+            "line": 9
+          },
+          {
+            "name": "@addItem",
+            "line": 9
+          },
+          {
+            "name": "@step2",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "step-2-:-homepage---add-items",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Step 2 : Homepage - Add items",
+    "tags": [],
+    "uri": "features/ui/step2_add_item.feature"
+  },
+  {
+    "description": "    As a customer of the shop\n    I want to provide shipping details\n    So that I can submit the order",
+    "elements": [
+      {
+        "description": "",
+        "id": "step-3-:-shipping-details;input-all-required-fields",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Input all required fields",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 94039791
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4195641291
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Shipping Details page",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:6"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 9231165
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "phone_number",
+                      "0984277737"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "street",
+                      "Ramintra"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "city",
+                      "Bangkok"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "country",
+                      "Thailand"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I input the following shipping details:",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:24"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 17865374
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I submit order successfully",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:38"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 16215624
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@positive",
+            "line": 9
+          },
+          {
+            "name": "@shippingDetails",
+            "line": 9
+          },
+          {
+            "name": "@step3",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-3-:-shipping-details;input-some-required-fields",
+        "keyword": "Scenario Outline",
+        "line": 29,
+        "name": "Input some required fields",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 93863750
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2133393167
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Shipping Details page",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:6"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 8477291
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "phone_number",
+                      "street",
+                      "city",
+                      "country"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "0984277737",
+                      "Ramintra",
+                      "Bangkok",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I input the following shipping details:",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:24"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 24657332
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should not submit order successfully",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:45"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 14992375
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 18
+          },
+          {
+            "name": "@shippingDetails",
+            "line": 18
+          },
+          {
+            "name": "@step3",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-3-:-shipping-details;input-some-required-fields",
+        "keyword": "Scenario Outline",
+        "line": 30,
+        "name": "Input some required fields",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 82920041
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2589451542
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Shipping Details page",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:6"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 30021458
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "phone_number",
+                      "street",
+                      "city",
+                      "country"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "0984277737",
+                      "Ramintra",
+                      "",
+                      "Thailand"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I input the following shipping details:",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:24"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 29725082
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should not submit order successfully",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:45"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 13870417
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 18
+          },
+          {
+            "name": "@shippingDetails",
+            "line": 18
+          },
+          {
+            "name": "@step3",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-3-:-shipping-details;input-some-required-fields",
+        "keyword": "Scenario Outline",
+        "line": 31,
+        "name": "Input some required fields",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 101888667
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3164610249
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Shipping Details page",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:6"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 12078083
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "phone_number",
+                      "street",
+                      "city",
+                      "country"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "0984277737",
+                      "",
+                      "Bangkok",
+                      "Thailand"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I input the following shipping details:",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:24"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 29011582
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should not submit order successfully",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:45"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 14805667
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 18
+          },
+          {
+            "name": "@shippingDetails",
+            "line": 18
+          },
+          {
+            "name": "@step3",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "step-3-:-shipping-details;input-some-required-fields",
+        "keyword": "Scenario Outline",
+        "line": 32,
+        "name": "Input some required fields",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 97538708
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2404155709
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Shipping Details page",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:6"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 10834417
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "phone_number",
+                      "street",
+                      "city",
+                      "country"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "",
+                      "Ramintra",
+                      "Bangkok",
+                      "Thailand"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I input the following shipping details:",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:24"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 29415333
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should not submit order successfully",
+            "match": {
+              "location": "src/steps/step3_shipping_details.ts:45"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 17060166
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 18
+          },
+          {
+            "name": "@shippingDetails",
+            "line": 18
+          },
+          {
+            "name": "@step3",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "step-3-:-shipping-details",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Step 3 : Shipping Details",
+    "tags": [],
+    "uri": "features/ui/step3_shipping_details.feature"
+  },
+  {
+    "description": "    As a customer of the shop\n    I want to submit the order\n    So that I can see my shipping details",
+    "elements": [
+      {
+        "description": "",
+        "id": "step-3-:-shipping-details;the-addess-is-displayed-correctly-by-concat-between-street,-city---country",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "The addess is displayed correctly by concat between Street, City - Country",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 83854792
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2304687459
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "phone_number",
+                      "0984277737"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "street",
+                      "Ramintra"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "city",
+                      "Bangkok"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "country",
+                      "Thailand"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the Congrats page with the following shipping details:",
+            "match": {
+              "location": "src/steps/step4_congrat.ts:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1131666
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I am on the Congrats page",
+            "match": {
+              "location": "src/steps/step4_congrat.ts:36"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1011291
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the address being displayed correctly",
+            "match": {
+              "location": "src/steps/step4_congrat.ts:42"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 13062249
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@positive",
+            "line": 13
+          },
+          {
+            "name": "@congrats",
+            "line": 13
+          },
+          {
+            "name": "@step4",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "step-3-:-shipping-details",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Step 3 : Shipping Details",
+    "tags": [],
+    "uri": "features/ui/step4_congrats.feature"
+  }
+]

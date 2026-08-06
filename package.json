@@ -3,6 +3,7 @@
 		"@cucumber/cucumber": "^13.2.0",
 		"@playwright/test": "^1.62.1",
 		"@types/node": "^26.1.2",
+		"cucumber-html-reporter": "^7.2.0",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.8.3"
 	},
@@ -10,7 +11,16 @@
 		"test": "npx cucumber-js",
 		"test:positive": "npx cucumber-js --tags '@positive'",
 		"test:negative": "npx cucumber-js --tags '@negative'",
-		"test:parallel": "npx cucumber-js --parallel 4"
+		"test:parallel": "npx cucumber-js --parallel 4",
+		"test:api": "npx cucumber-js features/api --parallel 4 --format json:reports/api-report/api-report.json",
+		"test:ui": "npx cucumber-js features/ui --parallel 4 --format json:reports/ui-report/ui-report.json",
+		"report:api": "node reporter-config-api.js",
+		"report:ui": "node reporter-config-ui.js",
+		"test:api:html": "npm run test:api && npm run report:api",
+		"test:ui:html": "npm run test:ui && npm run report:ui",
+		"test:all": "npm run test:api && npm run test:ui",
+		"report:all": "npm run report:api && npm run report:ui",
+		"test:all:html": "npm run test:all && npm run report:all"
 	},
 	"name": "silakob-cucumber-test",
 	"version": "1.0.0",

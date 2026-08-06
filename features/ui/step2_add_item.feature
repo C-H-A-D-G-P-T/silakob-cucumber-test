@@ -14,5 +14,5 @@ Feature: Step 2 : Homepage - Add items
             | Gucci Bloom Eau de | 3        |
         Then I should see added item in my cart
         And Total cost is calculated correctly
-        Then Proceed to checkout button will be enabled
-        And I clicks on Proceed to checkout button
+        And Proceed to checkout button will be enabled
+        Then I clicks on Proceed to checkout button

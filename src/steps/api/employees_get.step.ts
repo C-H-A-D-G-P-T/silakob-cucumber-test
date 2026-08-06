@@ -15,8 +15,14 @@ When('I send a GET request to get the employee detail', async function () {
 
 	this.response = await employeeAPI.getEmployee(this.employeeId);
 
-	const responseJson = await this.response.json();
-	console.log(`RES: ${responseJson}`);
+	try {
+		const responseJson = await this.response.json();
+		const formatRes = JSON.stringify(responseJson, null, 4);
+		console.log(`RES: ${formatRes}`);
+	} catch {
+		const responseText = await this.response.text();
+		console.log(`RES: ${responseText}`);
+	}
 });
 
 Then('the response body should contain the message {string}', async function (errorMessage) {

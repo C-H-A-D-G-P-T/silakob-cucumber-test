@@ -17,7 +17,7 @@ jobs:
                 ports:
                     - 8887:8081
                 options: >-
-                    --health-cmd "curl -f http://localhost:8887/api/v1/employees/1 || exit 1"
+                    --health-cmd "curl -f http://localhost:8081/api/v1/employees/1 || exit 1"
                     --health-interval 10s
                     --health-timeout 5s
                     --health-retries 5
@@ -51,7 +51,7 @@ jobs:
               run: |
                   echo "Waiting for API to be ready..."
                   for i in {1..30}; do
-                    if curl -f http://localhost:8081/api/v1/employees/1; then
+                    if curl -f http://localhost:8887/api/v1/employees/1; then
                       echo "✅ API is ready!"
                       break
                     fi

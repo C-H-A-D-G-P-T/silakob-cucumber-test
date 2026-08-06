@@ -14,10 +14,14 @@ When('I send a GET request to get the employee detail', async function () {
 	const employeeAPI = new EmployeeApi(this.apiContext);
 
 	this.response = await employeeAPI.getEmployee(this.employeeId);
+
+	const responseJson = await this.response.json();
+	console.log(`RES: ${responseJson}`);
 });
 
 Then('the response body should contain the message {string}', async function (errorMessage) {
 	const responseText = await this.response.text();
 
 	expect(responseText).toBe(errorMessage);
+	console.log(`Error message matches as expected: ${errorMessage}`);
 });

@@ -10,7 +10,11 @@ When('I send a POST request to create the employee', async function () {
 	const employeeAPI = new EmployeeApi(this.apiContext);
 
 	const requestBody: any = this.employeeData;
+	console.log(`REQ: ${requestBody}`);
 	this.response = await employeeAPI.createEmployee(requestBody);
+
+	const responseJson = await this.response.json();
+	console.log(`RES: ${responseJson}`);
 });
 
 Then('the error message should be {string}', async function (defaultMessage: string) {

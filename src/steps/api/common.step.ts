@@ -6,5 +6,6 @@ Given('I set the API endpoint to {string}', async function (endpoint) {
 });
 
 Then('the response status should be {int}', async function (statusCode: number) {
-    expect(this.response.status()).toBe(statusCode)
-})
+	expect(this.response.status()).toBe(statusCode);
+	console.log(`The response status matches as expected: ${statusCode}`);
+});

@@ -11,6 +11,17 @@ jobs:
     test:
         runs-on: ubuntu-latest
 
+        services:
+            api:
+                image: rvancea/qa-practice-api:latest
+                ports:
+                    - 8887:8081
+                options: >-
+                    --health-cmd "curl -f http://localhost:8887/api/v1/employees/1 || exit 1"
+                    --health-interval 10s
+                    --health-timeout 5s
+                    --health-retries 5
+
         steps:
             - uses: actions/checkout@v4
 
@@ -36,6 +47,18 @@ jobs:
             - name: Install Playwright browsers
               run: npx playwright install --with-deps chromium
 
+            - name: Wait for API to be ready
+              run: |
+                  echo "Waiting for API to be ready..."
+                  for i in {1..30}; do
+                    if curl -f http://localhost:8887/api/v1/employees/1; then
+                      echo "✅ API is ready!"
+                      break
+                    fi
+                    echo "Attempt $i: API not ready yet..."
+                    sleep 2
+                  done
+
             - name: Run tests
               run: npm run test:all:html
               env:
@@ -46,7 +69,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                   name: ui-report
-                  path: reports/ui-report
+                  path: reports/ui-report/ui-report.html
                   retention-days: 30
 
             - name: Upload report API
@@ -54,5 +77,5 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                   name: api-report
-                  path: reports/api-report
+                  path: reports/api-report/api-report.html
                   retention-days: 30

@@ -1,6 +1,5 @@
 import { Before, After } from '@cucumber/cucumber';
 import { chromium, Browser, request as playwrightRequest, APIRequestContext } from '@playwright/test';
-import { EmployeeApi } from '../api/employeeApi';
 
 let browser: Browser;
 let apiContext: APIRequestContext;

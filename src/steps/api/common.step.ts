@@ -1,4 +1,4 @@
-import { Given, When, Then } from '@cucumber/cucumber';
+import { Given, Then } from '@cucumber/cucumber';
 import { expect } from 'playwright/test';
 
 Given('I set the API endpoint to {string}', async function (endpoint) {

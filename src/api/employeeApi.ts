@@ -1,4 +1,3 @@
-import { Given, When, Then } from '@cucumber/cucumber';
 import { APIRequestContext } from '@playwright/test';
 
 /*
